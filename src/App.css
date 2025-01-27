@@ -13,7 +13,7 @@ html, body {
 body {
   font-family: Arial, sans-serif;
   font-size: medium;
-  width: 100%; /* Ensure the body takes full width */
+  width: 100 %; /* Ensure the body takes full width */
 }
 
 /* Default container layout */
@@ -21,7 +21,7 @@ body {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 100%; /* Prevent overflow */
+  width: 100 %; /* Prevent overflow */
 }
 
 .container .column {
@@ -50,21 +50,21 @@ img {
 @media (max-width: 600px) {
   body {
     font-size: 14px;
-    width: 50 %;
+    width: 20 %;
   }
 
   header {
     text-align: center;
-    padding: 10px;
+    padding: 5px;
   }
 
   .container {
     display: block; /* Stack columns vertically */
-    padding: 0 10px; /* Prevent content from touching screen edges */
+    padding: 0 5px; /* Prevent content from touching screen edges */
   }
 
   .container .column {
-    width: 100%; /* Full width for each column on mobile */
+    width: 50 %; /* Full width for each column on mobile */
     margin-bottom: 20px; /* Spacing between columns */
   }
 
@@ -74,7 +74,7 @@ img {
   }
 
   img {
-    width: 100%; /* Make sure images scale down on mobile */
+    width: 50 %; /* Make sure images scale down on mobile */
     height: auto;
   }
 }
