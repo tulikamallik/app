@@ -1,75 +1,66 @@
-/* Base styles (for larger screens) */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  font-size: medium;
-}
+/* Base styles */
 html, body {
   margin: 0;
   padding: 0;
+  width: 100%; /* Ensure the body takes full width */
   overflow-x: hidden; /* Prevents horizontal scrolling */
 }
 
 * {
-  box-sizing: border-box; /* Makes sure padding and borders don't mess up the layout */
+  box-sizing: border-box;
 }
 
-/* Container layout for large screens */
+body {
+  font-family: Arial, sans-serif;
+  font-size: medium;
+  width: 100%; /* Ensure the body takes full width */
+}
+
+/* Default container layout */
 .container {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  width: 100%; /* Prevent overflow */
 }
 
 .container .column {
-  width: 48%; /* Adjust this value as needed */
+  width: 48%;
   margin-bottom: 20px;
 }
 
 img {
-  max-width: 100%;
+  width: 100%; /* Ensures images scale to container width */
   height: auto;
 }
 
 /* Tablet (max-width: 1024px) */
 @media (max-width: 1024px) {
-  body {
-    font-size: 16px; /* Slightly larger font for tablets */
-  }
-
-  header {
-    padding: 15px 20px;
-  }
-
   .container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
   }
 
   .container .column {
-    width: 48%; /* Keep the two-column layout for tablets */
-    margin-bottom: 20px;
+    width: 48%; /* Adjust width for tablet */
   }
 }
 
 /* Mobile (max-width: 600px) */
 @media (max-width: 600px) {
+  body {
+    font-size: 14px;
+    width: 50 %;
+  }
+
   header {
     text-align: center;
     padding: 10px;
   }
 
-  /* Apply mobile font size adjustments */
-  body {
-    font-size: 14px; /* Adjust font size for smaller screens */
-  }
-
-  /* Adjust container layout for mobile */
   .container {
     display: block; /* Stack columns vertically */
-    width: 100%;
-    padding: 0 10px; /* Add padding to ensure content isn't touching screen edges */
+    padding: 0 10px; /* Prevent content from touching screen edges */
   }
 
   .container .column {
@@ -77,22 +68,13 @@ img {
     margin-bottom: 20px; /* Spacing between columns */
   }
 
-  /* Apply custom text styles */
-  body, .container .column {
-    font-weight: 500; /* Font weight */
-    line-height: 1.5; /* Adjust line height */
-    margin-bottom: 20px; /* Add spacing between elements */
-    text-transform: capitalize; /* Capitalize text */
-  }
-
-  /* Optional: Remove spinning animation on mobile */
+  /* Optional: Disable animation on mobile */
   .App-logo {
-    animation: none; /* Disable animation on mobile */
+    animation: none;
   }
 
-  /* Ensure images are responsive */
   img {
-    width: 100%; /* Images take full width on mobile */
+    width: 100%; /* Make sure images scale down on mobile */
     height: auto;
   }
 }
