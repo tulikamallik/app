@@ -50,7 +50,7 @@ img {
 @media (max-width: 600px) {
   body {
     font-size: 14px;
-    width: 20 %;
+    width: fic-content;
   }
 
   header {
@@ -64,7 +64,7 @@ img {
   }
 
   .container .column {
-    width: 50 %; /* Full width for each column on mobile */
+    width: fix-content; /* Full width for each column on mobile */
     margin-bottom: 20px; /* Spacing between columns */
   }
 
@@ -74,7 +74,7 @@ img {
   }
 
   img {
-    width: 50 %; /* Make sure images scale down on mobile */
+    width: fix-content; /* Make sure images scale down on mobile */
     height: auto;
   }
 }
