@@ -1,9 +1,11 @@
-
+/* Base styles for desktop */
 .hero-section {
   text-align: center;
   padding: 120px 0;
   color: #ffffff;
-   background-image: url(https://png.pngtree.com/thumb_back/fw800/background/20230928/pngtree-the-swimming-pool-and-the-nightlife-of-a-resort-image_13307078.jpg)
+  background-image: url(https://png.pngtree.com/thumb_back/fw800/background/20230928/pngtree-the-swimming-pool-and-the-nightlife-of-a-resort-image_13307078.jpg);
+  background-size: cover; /* Ensure the background covers the section */
+  background-position: center; /* Center the background image */
 }
 
 .hero-title {
@@ -74,4 +76,75 @@
 .search-button img {
   width: 20px;
   height: 20px;
+}
+
+/* Tablet: 600px to 1024px */
+@media (max-width: 1024px) {
+  .hero-section {
+    padding: 100px 0; /* Adjust padding for tablets */
+  }
+
+  .hero-title {
+    font-size: 32px; /* Smaller font size for tablets */
+    line-height: 48px;
+  }
+
+  .hero-subtitle {
+    font-size: 14px; /* Slightly smaller subtitle for tablets */
+    margin-bottom: 40px;
+  }
+
+  .search-form {
+    padding: 14px;
+    max-width: 550px; /* Make search form smaller on tablets */
+  }
+
+  .search-form input {
+    font-size: 14px; /* Adjust input font size */
+  }
+
+  .search-button {
+    width: 35px;
+    height: 35px; /* Slightly smaller button on tablet */
+  }
+}
+
+/* Mobile: 600px and below */
+@media (max-width: 600px) {
+  .hero-section {
+    padding: 80px 0; /* Adjust padding for mobile */
+  }
+
+  .hero-title {
+    font-size: 26px; /* Smaller font size for mobile */
+    line-height: 36px;
+  }
+
+  .hero-subtitle {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+
+  .search-form {
+    flex-direction: column; /* Stack the search input and button vertically */
+    padding: 12px;
+    max-width: 90%; /* Make the search form almost full width on mobile */
+  }
+
+  .search-input {
+    margin-right: 0; /* Remove right margin in mobile layout */
+    margin-bottom: 10px; /* Add space between input and button */
+    width: 100%; /* Make input take full width */
+  }
+
+  .search-button {
+    width: 45px;
+    height: 45px; /* Larger button on mobile */
+    margin-top: 10px; /* Add margin top for spacing */
+  }
+
+  .search-button img {
+    width: 25px; /* Larger icon size on mobile */
+    height: 25px;
+  }
 }
