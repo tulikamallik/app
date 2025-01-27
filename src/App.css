@@ -1,42 +1,3 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 /* Base styles (for larger screens) */
 body {
   font-family: Arial, sans-serif;
@@ -96,18 +57,26 @@ img {
     padding: 10px;
   }
 
-  /* Adjust font size for mobile screens */
+  /* Apply requested styles for mobile */
   body {
-    font-size: 14px;
-  }
-
-  /* Stack columns vertically on mobile */
-  .container {
-    display: block;
+    font-size: medium; /* Medium font size */
   }
 
   .container .column {
     width: 100%;
     margin-bottom: 20px;
+  }
+
+  /* Apply custom styles to text */
+  body, .container .column {
+    font-weight: 500; /* Font weight */
+    line-height: 15px; /* Line height */
+    margin-bottom: 20px; /* Margin at the bottom */
+    text-transform: capitalize; /* Capitalize text */
+  }
+
+  /* Optional: Disable spinning logo animation on mobile */
+  .App-logo {
+    animation: none;
   }
 }
