@@ -48,27 +48,27 @@ img {
 
 /* Mobile (max-width: 600px) */
 [class*="col-"] {
-  width: 25 %;
+  width: 10 %;
 }
 @media (max-width: 600px) {
   body {
-    font-size: 12px;
+    font-size: 5px;
     width: fix-content;
   }
 
   header {
     text-align: center;
-    padding: 5px;
+    padding: 2px;
   }
 
   .container {
     display: block; /* Stack columns vertically */
-    padding: 0 5px; /* Prevent content from touching screen edges */
+    padding: 0 2px; /* Prevent content from touching screen edges */
   }
 
   .container .column {
     width: fix-content; /* Full width for each column on mobile */
-    margin-bottom: 20px; /* Spacing between columns */
+    margin-bottom: 10px; /* Spacing between columns */
   }
 
   /* Optional: Disable animation on mobile */
