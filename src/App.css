@@ -3,8 +3,16 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  font-size: medium;
 }
-
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+* {
+  box-sizing: border-box; /* Makes sure padding and borders don't mess up the layout */
+}
 header {
   background-color: #333;
   color: white;
