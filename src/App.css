@@ -5,14 +5,17 @@ body {
   padding: 0;
   font-size: medium;
 }
+
 html, body {
   margin: 0;
   padding: 0;
   overflow-x: hidden; /* Prevents horizontal scrolling */
 }
+
 * {
   box-sizing: border-box; /* Makes sure padding and borders don't mess up the layout */
 }
+
 header {
   background-color: #333;
   color: white;
@@ -53,7 +56,7 @@ img {
   }
 
   .container .column {
-    width: 48%;
+    width: 48%; /* Keep the two-column layout for tablets */
     margin-bottom: 20px;
   }
 }
@@ -65,26 +68,38 @@ img {
     padding: 10px;
   }
 
-  /* Apply requested styles for mobile */
+  /* Mobile font size adjustments */
   body {
-    font-size: medium; /* Medium font size */
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+
+  .container {
+    display: block; /* Stack the columns vertically */
+    width: 100%;
+    padding: 0 10px; /* Add padding for better spacing */
   }
 
   .container .column {
-    width: 100%;
-    margin-bottom: 20px;
+    width: 100%; /* Full width for each column on mobile */
+    margin-bottom: 20px; /* Spacing between the columns */
   }
 
-  /* Apply custom styles to text */
+  /* Apply custom styles to text on mobile */
   body, .container .column {
-    font-weight: 500; /* Font weight */
-    line-height: 15px; /* Line height */
-    margin-bottom: 20px; /* Margin at the bottom */
+    font-weight: 500; /* Adjust font weight */
+    line-height: 1.5; /* Adjust line-height for better readability */
+    margin-bottom: 20px; /* Add spacing between elements */
     text-transform: capitalize; /* Capitalize text */
   }
 
   /* Optional: Disable spinning logo animation on mobile */
   .App-logo {
-    animation: none;
+    animation: none; /* Remove logo spin animation on mobile */
+  }
+
+  /* Adjust images for mobile devices */
+  img {
+    width: 100%; /* Make sure images take full width on mobile */
+    height: auto;
   }
 }
