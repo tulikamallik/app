@@ -111,40 +111,54 @@
 
 /* Mobile: 600px and below */
 @media (max-width: 600px) {
+  /* Hero section adjustments for mobile */
   .hero-section {
-    padding: 80px 0; /* Adjust padding for mobile */
+    padding: 60px 0; /* Adjust padding for mobile */
+    background-position: center top; /* Focus on the top of the image */
   }
 
   .hero-title {
-    font-size: 26px; /* Smaller font size for mobile */
-    line-height: 36px;
+    font-size: 24px; /* Further reduce font size on mobile */
+    line-height: 32px;
   }
 
   .hero-subtitle {
     font-size: 14px;
-    margin-bottom: 30px;
+    margin-bottom: 20px; /* Reduce margin for mobile */
   }
 
+  /* Search form adjustments for mobile */
   .search-form {
     flex-direction: column; /* Stack the search input and button vertically */
     padding: 12px;
-    max-width: 90%; /* Make the search form almost full width on mobile */
+    max-width: 90%; /* Ensure the form is not too wide */
+    margin: 0 auto; /* Center the form */
   }
 
   .search-input {
-    margin-right: 0; /* Remove right margin in mobile layout */
+    width: 100%; /* Ensure the input takes full width */
+    margin-right: 0; /* Remove margin on the right */
     margin-bottom: 10px; /* Add space between input and button */
-    width: 100%; /* Make input take full width */
   }
 
   .search-button {
     width: 45px;
-    height: 45px; /* Larger button on mobile */
-    margin-top: 10px; /* Add margin top for spacing */
+    height: 45px;
+    margin-top: 10px; /* Add space between input and button */
   }
 
   .search-button img {
     width: 25px; /* Larger icon size on mobile */
     height: 25px;
+  }
+
+  /* Responsive adjustments for other elements */
+  img {
+    max-width: 100%; /* Ensure images scale correctly */
+    height: auto;
+  }
+
+  .container {
+    width: 100%;
   }
 }
