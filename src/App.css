@@ -48,12 +48,12 @@ img {
 
 /* Mobile (max-width: 600px) */
 [class*="col-"] {
-  width: 50 %;
+  width: 25 %;
 }
 @media (max-width: 600px) {
   body {
-    font-size: 14px;
-    width: fic-content;
+    font-size: 12px;
+    width: fix-content;
   }
 
   header {
