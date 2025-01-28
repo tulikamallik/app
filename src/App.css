@@ -1,111 +1,104 @@
 /* Base styles */
-*, *::before, *::after {
-  box-sizing: border-box;
+html, body {
   margin: 0;
   padding: 0;
+  width: 100%; /* Ensure the body takes full width */
+  overflow-x: hidden; /* Prevents horizontal scrolling */
 }
 
-html, body {
-  width: 100%;
-  min-height: 100vh;
-  overflow-x: hidden;
+* {
+  box-sizing: border-box;
 }
 
 body {
   font-family: Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
+  font-size: medium;
+  width: 100%; /* Ensure the body takes full width */
 }
 
-/* Container layout */
+/* Default container layout */
 .container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-/* Flexbox grid system */
-.row {
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
-  margin: -10px;
+  width: 100%; /* Prevent overflow */
 }
 
-.column {
-  flex: 1;
-  padding: 10px;
-  min-width: 250px;
+.container .column {
+  width: 48%;
+  margin-bottom: 20px;
 }
 
-/* Images */
 img {
-  max-width: 100%;
+  width: 100%; /* Ensures images scale to container width */
   height: auto;
-  display: block;
 }
 
-/* Typography */
-h1 {
-  font-size: 2.5rem;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
-p {
-  margin-bottom: 1rem;
-}
-
-/* Tablet styles */
+/* Tablet (max-width: 1024px) */
 @media (max-width: 1024px) {
-  body {
-    font-size: 15px;
-  }
-
   .container {
-    max-width: 900px;
+    display: flex;
+    justify-content: space-between;
   }
 
-  h1 {
-    font-size: 2.2rem;
-  }
-
-  h2 {
-    font-size: 1.8rem;
+  .container .column {
+    width: 48%; /* Adjust width for tablet */
   }
 }
 
-/* Mobile styles */
+/* Laptop (max-width: 1280px) */
+@media (max-width: 1280px) {
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .container .column {
+    width: 45%; /* Slightly smaller columns for laptop */
+  }
+}
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  .container {
+    display: block; /* Stack columns vertically */
+    padding: 0 2px; /* Prevent content from touching screen edges */
+  }
+
+  .container .column {
+    width: 100%; /* Full width for each column on mobile */
+    margin-bottom: 10px; /* Spacing between columns */
+  }
+
+  img {
+    width: 100%; /* Ensure images scale properly */
+    height: auto;
+  }
+}
+
+/* Small Mobile (max-width: 600px) */
 @media (max-width: 600px) {
   body {
-    font-size: 14px;
+    font-size: 12px; /* Adjust font size for better readability */
   }
 
-  .container {
-    padding: 0 15px;
+  header {
+    text-align: center;
+    padding: 10px;
   }
 
-  .column {
-    flex: 0 0 100%;
-    min-width: 100%;
+  .container .column {
+    width: 100%; /* Full width for columns on small mobile */
+    margin-bottom: 10px;
   }
 
-  h1 {
-    font-size: 1.8rem;
+  img {
+    width: 100%; /* Ensure images fit on smaller screens */
+    height: auto;
   }
 
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  /* Optional: Adjust spacing for mobile */
-  .row {
-    margin: -5px;
-  }
-
-  .column {
-    padding: 5px;
+  /* Optional: Disable animation on mobile */
+  .App-logo {
+    animation: none;
   }
 }
