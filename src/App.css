@@ -1,83 +1,111 @@
 /* Base styles */
-html, body {
+*, *::before, *::after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  width: 100%; /* Ensure the body takes full width */
-  overflow-x: hidden; /* Prevents horizontal scrolling */
 }
 
-* {
-  box-sizing: border-box;
+html, body {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
 body {
   font-family: Arial, sans-serif;
-  font-size: medium;
-  width: 100 %; /* Ensure the body takes full width */
+  font-size: 16px;
+  line-height: 1.5;
 }
 
-/* Default container layout */
+/* Container layout */
 .container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Flexbox grid system */
+.row {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
-  width: 100 %; /* Prevent overflow */
+  margin: -10px;
 }
 
-.container .column {
-  width: 48%;
-  margin-bottom: 20px;
+.column {
+  flex: 1;
+  padding: 10px;
+  min-width: 250px;
 }
 
+/* Images */
 img {
-  width: 100%; /* Ensures images scale to container width */
+  max-width: 100%;
   height: auto;
+  display: block;
 }
 
-/* Tablet (max-width: 1024px) */
+/* Typography */
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* Tablet styles */
 @media (max-width: 1024px) {
+  body {
+    font-size: 15px;
+  }
+
   .container {
-    display: flex;
-    justify-content: space-between;
+    max-width: 900px;
   }
 
-  .container .column {
-    width: 48%; /* Adjust width for tablet */
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
   }
 }
 
-/* Mobile (max-width: 600px) */
-[class*="col-"] {
-  width: 10 %;
-}
+/* Mobile styles */
 @media (max-width: 600px) {
   body {
-    font-size: 5px;
-    width: fix-content;
-  }
-
-  header {
-    text-align: center;
-    padding: 2px;
+    font-size: 14px;
   }
 
   .container {
-    display: block; /* Stack columns vertically */
-    padding: 0 2px; /* Prevent content from touching screen edges */
+    padding: 0 15px;
   }
 
-  .container .column {
-    width: fix-content; /* Full width for each column on mobile */
-    margin-bottom: 10px; /* Spacing between columns */
+  .column {
+    flex: 0 0 100%;
+    min-width: 100%;
   }
 
-  /* Optional: Disable animation on mobile */
-  .App-logo {
-    animation: none;
+  h1 {
+    font-size: 1.8rem;
   }
 
-  img {
-    width: fix-content; /* Make sure images scale down on mobile */
-    height: auto;
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  /* Optional: Adjust spacing for mobile */
+  .row {
+    margin: -5px;
+  }
+
+  .column {
+    padding: 5px;
   }
 }
