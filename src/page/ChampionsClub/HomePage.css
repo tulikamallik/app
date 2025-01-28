@@ -1,15 +1,18 @@
-
-
+/* Base styles */
 .home-page {
-  width: 1440px;
+  width: 100%;
+  max-width: 1440px;
   margin: 0 auto;
   background: #ffffff;
   overflow: hidden;
+  position: relative;
+  padding: 0 20px; /* Add padding for smaller screens */
 }
 
 .hero-background {
   position: absolute;
-  width: 1440px;
+  width: 100%;
+  max-width: 1440px;
   top: 162px;
   bottom: 2965px;
   left: 50%;
@@ -21,11 +24,68 @@
 
 .experiences-background {
   position: absolute;
-  width: 1440px;
+  width: 100%;
+  max-width: 1440px;
   top: 1673px;
   bottom: 1226px;
   left: 50%;
   background: rgba(248, 245, 240, 0.2) url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-01-10/2d3f3148-c3f0-4422-bdf0-04691f2b2010.png) no-repeat center;
+  background-size: cover;
   transform: translate(-50%, 0);
   z-index: -1;
+}
+
+/* Large devices (laptops/desktops, up to 1440px) */
+@media screen and (max-width: 1440px) {
+  .hero-background,
+  .experiences-background {
+    width: 100%;
+  }
+}
+
+/* Medium devices (tablets, up to 992px) */
+@media screen and (max-width: 992px) {
+  .hero-background {
+    top: 120px;
+    bottom: 2000px;
+  }
+  
+  .experiences-background {
+    top: 1200px;
+    bottom: 800px;
+  }
+}
+
+/* Small devices (landscape phones, up to 768px) */
+@media screen and (max-width: 768px) {
+  .home-page {
+    padding: 0 15px;
+  }
+  
+  .hero-background {
+    top: 100px;
+    bottom: 1500px;
+  }
+  
+  .experiences-background {
+    top: 1000px;
+    bottom: 600px;
+  }
+}
+
+/* Extra small devices (portrait phones, up to 576px) */
+@media screen and (max-width: 576px) {
+  .home-page {
+    padding: 0 10px;
+  }
+  
+  .hero-background {
+    top: 80px;
+    bottom: 1200px;
+  }
+  
+  .experiences-background {
+    top: 800px;
+    bottom: 400px;
+  }
 }
