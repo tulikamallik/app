@@ -5,6 +5,19 @@
   position: relative;
 }
 
+@media screen and (max-width: 1024px) {
+  .stories-section {
+    padding: 60px 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .stories-section {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+}
+
 .stories-content {
   flex: 1;
 }
@@ -18,6 +31,13 @@
   margin-bottom: 10px;
 }
 
+@media screen and (max-width: 768px) {
+  .section-title {
+    font-size: 28px;
+    line-height: 42px;
+  }
+}
+
 .section-description {
   font-family: Ubuntu Sans, sans-serif;
   font-size: 16px;
@@ -28,16 +48,37 @@
   margin-bottom: 30px;
 }
 
+@media screen and (max-width: 768px) {
+  .section-description {
+    font-size: 14px;
+    line-height: 26px;
+  }
+}
+
 .stories-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
 
+@media screen and (max-width: 768px) {
+  .stories-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
+
 .story-card {
   position: relative;
   width: 260px;
   height: 260px;
+}
+
+@media screen and (max-width: 768px) {
+  .story-card {
+    width: 100%;
+    height: 240px;
+  }
 }
 
 .story-image {
@@ -79,6 +120,21 @@
   height: 603px;
 }
 
+@media screen and (max-width: 1024px) {
+  .stories-image {
+    width: 400px;
+    height: 500px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .stories-image {
+    width: 100%;
+    height: 400px;
+    margin-top: 30px;
+  }
+}
+
 .background-image {
   width: 100%;
   height: 100%;
@@ -95,10 +151,31 @@
   object-fit: cover;
 }
 
+@media screen and (max-width: 1024px) {
+  .foreground-image {
+    width: 340px;
+    height: 450px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .foreground-image {
+    width: 90%;
+    height: 360px;
+  }
+}
+
 .navigation-buttons {
   position: absolute;
   bottom: 50px;
   right: 75px;
+}
+
+@media screen and (max-width: 768px) {
+  .navigation-buttons {
+    bottom: 20px;
+    right: 20px;
+  }
 }
 
 .nav-button {
@@ -108,6 +185,14 @@
   border: none;
   cursor: pointer;
   margin-left: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-button {
+    width: 40px;
+    height: 40px;
+    margin-left: 15px;
+  }
 }
 
 .nav-button img {
